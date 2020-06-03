@@ -35,7 +35,7 @@ def main():
                 f +=  1
                 print(Fore.GREEN+"[*] Sending Packet To %s Count[%d]! "%(ip,f))
         except socket.gaierror:
-            print(Fore.RED+"\n \t [*] Plaese Connect To Internet!!\n")
+            print(Fore.RED+"\n \t [*] Plaese Connect To Internet!! or address site not found\n")
 
     except IndexError:
         banner()
