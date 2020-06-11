@@ -1,0 +1,11 @@
+frist install python..
+and 
+run :
+    pip install -r library.txt
+    or
+    pip3 install -r library.txt
+end run:
+    python ddos.py
+    or
+    python3 ddos.py
+Done!
