@@ -40,7 +40,7 @@ def main():
                 f +=  1
                 print(Fore.GREEN+"[***]"+Fore.WHITE+" Sending Packet To %s Count"%ip+Fore.BLUE+"[%d]!"%f+Fore.WHITE)
         except socket.gaierror:
-            print(Fore.GREEN+"\n \t [*"+Fore.WHITE+"*"+Fore.GREEN+"*]"+Fore.RED+" Plaese Connect To Internet!! or Address Site NotFound\n")
+            print(Fore.GREEN+"\n \t [*"+Fore.WHITE+"*"+Fore.GREEN+"*]"+Fore.RED+" Plaese Connect To Internet!! or Address Site NotFound Or Not Supported (Https) in Socket\n")
     except IndexError:
         banner()
 
