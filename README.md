@@ -4,7 +4,7 @@
 
 <h4>then simply run</h4>
 
-<h3>$ python3 ddos.py <ip> </h3>
+<h3>$ python3 ddos.py IP </h3>
 
 <img src="1.jpg" title="ddos.py">
 <br>
