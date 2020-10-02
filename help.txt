@@ -1,0 +1,4 @@
+pysocks
+bs4
+scapy
+beautifulsoup4
