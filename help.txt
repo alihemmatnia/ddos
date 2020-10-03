@@ -1,11 +1,11 @@
-frist install python..
-and 
-run :
-    pip install -r library.txt
-    or
-    pip3 install -r library.txt
-end run:
-    python ddos.py
-    or
-    python3 ddos.py
-Done!
+A to Z Help
+
+$ pkg install python3
+
+$ pip install colorama
+
+$ git clone https://github.com/A1python/ddos.git
+
+$ cd ddos
+
+$ python3 ddos.py <ipAddres>

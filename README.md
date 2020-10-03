@@ -1,17 +1,14 @@
-# ddos
+<h1>How to use</h1>
 
-<h3>Frist Run
+<h3>$ pip install colorama</3>
 
-pip install -r library.txt
+<h4>then simply run</h4>
 
-and 
+<h3>$ python3 ddos.py IP </h3>
 
-python ddos.py or python3 ddos.py
-</h3>
-<br><h1>screenshout
-
-<img src="2.png" title="ddos.py">
+<img src="1.jpg" title="ddos.py">
 <br>
+
+<img src="2.jpg" title="ddos2.py">
 <br>
-<img src="1.png" title="ddos for google">
-<h2>Done!</h2>
+<h2> Thanks </h2>
