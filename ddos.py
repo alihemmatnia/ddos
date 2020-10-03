@@ -44,7 +44,7 @@ def main():
         if overflowerror == 1:
             print(f"\n>>>> {Fore.MAGENTA}Previous time,You didn't enter port number between 0-65535{Style.RESET_ALL}")
             overflowerror -= 1
-        #modified by A1Python
+        
         port_int = input("\nDo you want change port(Y & N): ").lower()
         if port_int == "y":
             while True:
@@ -65,7 +65,6 @@ def main():
             print(Fore.GREEN+"\n \t [*"+Fore.WHITE+"*"+Fore.GREEN+"*]"+Fore.RED+" Plaese Connect To Internet!! or Address Site NotFound Or Not Supported (Https) in Socket\n")
     except IndexError:
         banner()
-        #Modified by A1Python
         print(f"\n{Fore.GREEN}--->{Style.RESET_ALL }{Fore.RED} You didn't type IP address"+Style.RESET_ALL)
     except OverflowError:
         overflowerror += 1
