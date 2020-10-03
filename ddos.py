@@ -46,12 +46,16 @@ def main():
         if overflowerror == 1:
             print(f"\n>>>> {Fore.MAGENTA}Previous time,You didn't enter port number between 0-65535{Style.RESET_ALL}")
             overflowerror -= 1
+ 
         elif oserror == 1:
             print(f"\n>>>> {Fore.BLUE}You Entered Zero,Enter port number more then 0(Zero){Style.RESET_ALL}")
             oserror -= 1
             
             overflowerror -= 1
         #modified by A1Python
+
+        
+
         port_int = input("\nDo you want change port(Y & N): ").lower()
         if port_int == "y":
             while True:
@@ -75,7 +79,6 @@ def main():
             main()
     except IndexError:
         banner()
-        #Modified by A1Python
         print(f"\n{Fore.GREEN}--->{Style.RESET_ALL }{Fore.RED} You didn't type IP address"+Style.RESET_ALL)
     except OverflowError:
         overflowerror += 1
