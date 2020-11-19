@@ -1,6 +1,6 @@
 A to Z Help
 
-$ pkg install python3
+$ pkg or apt install python3
 
 $ pip install colorama
 
