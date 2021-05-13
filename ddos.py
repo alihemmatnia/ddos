@@ -49,7 +49,7 @@ def main():
         elif oserror == 1:
             print(f"\n>>>> {Fore.BLUE}You Entered Zero,Enter port number more then 0(Zero){Style.RESET_ALL}")
             oserror -= 1
-        #modified by A1Python
+        
         port_int = input("\nDo you want change port(Y & N): ").lower()
         if port_int == "y":
             while True:
